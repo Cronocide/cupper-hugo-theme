@@ -17,7 +17,7 @@
 }
 html {
     font-size: calc(1em + 0.33vw);
-    font-family: Arial, Helvetica Neue, sans-serif;
+    font-family: "San Francisco", "Helvetica Neue", "Lucida Grande";
     line-height: 1.5;
     color: #111;
     background-color: #fefefe;
@@ -68,11 +68,16 @@ p img {
 figure p img {
     margin: 0;
 }
+p.http-status {
+    margin-top: 0;
+    text-align: center;
+    font-weight: bold;
+}
 :focus:not([tabindex="-1"]),
 [data-expands]:focus svg,
 .patterns a:focus .text,
 [for="themer"] :focus + [aria-hidden] {
-    outline: 4px solid #999;
+    /*outline: 4px solid #999;*/
 }
 a {
   outline-offset: 2px;
@@ -243,12 +248,13 @@ label {
   color: #fefefe;
   padding: 0.25em 0.75em;
   margin: 0.5rem;
+  cursor: pointer;
 }
 [for="themer"] [aria-hidden]::before {
-  content: 'off';
+  content: 'dark';
 }
 [for="themer"] :checked + [aria-hidden]::before {
-  content: 'on';
+  content: 'light';
 }
 
 /* Tables */
@@ -353,7 +359,7 @@ caption {
     margin-left: 15rem;
 }
 .main-and-footer > div {
-    max-width: 40rem;
+    max-width: 60rem;
     margin: 0 auto;
     padding: 2.25rem;
 }
@@ -419,7 +425,7 @@ caption {
 }
 #menu-button:focus {
     outline: none;
-    box-shadow: inset 0 0 0 0.25rem #999;
+    /*box-shadow: inset 0 0 0 0.25rem #999;*/
 }
 
 /* Tables of contents */
@@ -747,6 +753,9 @@ h1 svg {
 .bookmark-icon {
   vertical-align: middle;
 }
+.folder-icon {
+  vertical-align: middle;
+}
 .link-icon {
   width: 0.75em;
   height: 0.75em;
@@ -888,6 +897,15 @@ h1 svg {
 .gallery {
   display: flex;
   justify-content: center;
+}
+
+div.social {
+  margin-top: 5px;
+  text-align: center;
+}
+
+div.social a {
+  border-bottom: none;
 }
 
 /* Media queries */

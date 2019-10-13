@@ -122,7 +122,10 @@
   checkbox.addEventListener('change', function () {
     darkTheme(this.checked ? 'screen' : 'none');
   });
-
+  //checkbox.click();
+  if (localStorage.getItem('darkTheme') === null) {
+    localStorage.setItem('darkTheme', 'screen');
+  }
   window.addEventListener('DOMContentLoaded', function () {
     if ('filter' in document.body.style) {
       if (localStorage.getItem('darkTheme') === 'screen') {

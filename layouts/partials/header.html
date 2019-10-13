@@ -4,6 +4,11 @@
       <a class="logo" href="/" aria-label="{{ .Site.Title }} home page">
         <img src="{{ "images/logo.svg" | absURL }}" alt="">
       </a>
+      <label for="themer">
+      <input type="checkbox" id="themer" class="vh">
+      <span aria-hidden="true"></span> mode
+      </label>
+      <!--<p class="http-status">( HTTP/1.1 200 OK )</p>-->
       <p class="library-desc">
         {{ with .Site.Params.description }}
           {{ . | markdownify }}
@@ -11,5 +16,6 @@
       </p>
     </div>
     {{ partial "nav.html" . }}
+    {{ partial "social.html" . }}
   </div>
 </header>
