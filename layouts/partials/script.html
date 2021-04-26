@@ -1,2 +1,5 @@
 <script src="{{ "js/prism.js" | absURL }}"></script>
 <script src="{{ "js/dom-scripts.js" | absURL }}"></script>
+{{ if $.Site.Params.asciinema }}
+  <script src="{{ .Site.BaseURL }}js/asciinema-player.js"></script>
+{{ end }}
